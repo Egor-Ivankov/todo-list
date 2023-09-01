@@ -1,0 +1,8 @@
+.tasks-list {
+    list-style: none;
+}
+.task-list-empty {
+    font-weight: 200;
+    font-size: 20px;
+    margin-top: 20px;
+}
