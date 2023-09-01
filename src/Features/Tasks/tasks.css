@@ -1,8 +1,24 @@
 .tasks-list {
     list-style: none;
+    margin-right: 50px;
 }
 .task-list-empty {
     font-weight: 200;
     font-size: 20px;
     margin-top: 20px;
+}
+
+.item-enter {
+    opacity: 0;
+}
+.item-enter-active {
+    opacity: 1;
+    transition: opacity 400ms ease-in;
+}
+.item-exit {
+    opacity: 1;
+}
+.item-exit-active {
+    opacity: 0;
+    transition: opacity 400ms ease-in;
 }

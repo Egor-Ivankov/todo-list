@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import { nanoid } from 'nanoid';
 import { tasksCreated } from '../Tasks/tasksSlice';
 import { useDispatch, useSelector } from 'react-redux';
+import plusIcon from '../../img/plus-icon.png';
 import './taskAddItem.css';
 
 const TaskAddForm = () => {
@@ -9,7 +10,8 @@ const TaskAddForm = () => {
     const dispatch = useDispatch();
     const newTaskItem = {
         id: nanoid(),
-        value: newTask
+        value: newTask,
+        important: false
     }
     
     useSelector(state => state.tasks.tasks); //This code need for creating new IDs(without this code new IDs will be recurring)
@@ -32,7 +34,9 @@ const TaskAddForm = () => {
                     name="Task-creater"
                     placeholder='New Task'
                     />
-                <button className="add-btn" type='submit'>Add</button>
+                <button className="add-btn" type='submit'>
+                    <img src={plusIcon} alt="plus-icon" className='plus-icon'/>
+                </button>
             </form>
     );
 }

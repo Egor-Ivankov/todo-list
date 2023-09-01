@@ -1,3 +1,13 @@
+.task-list-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.important {
+    background-color: rgba(234, 173, 19, 0.306);
+}
+
 .task-item {
     border: .5px solid rgba(128, 128, 128, 0.477);
     border-radius: 5px;
@@ -12,17 +22,52 @@
 .task-item-span {
     font-weight: 200;
     font-size: 20px;
+    margin-left: 10px;
 }
 .delete-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: none;
     background-color: rgba(255, 0, 0, 0.463);
     color: white;
     border-radius: 10px;
-    width: 50px;
-    height: 26px;
+    width: 35px;
+    height: 30px;
     transition: transform .4s ease;
 }
 
 .delete-btn:hover {
     transform: translateY(-8%);
+}
+
+.cross-icon {
+    width: 18px;
+}
+
+.flag-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: rgba(234, 173, 19, 0.623);
+    color: white;
+    border-radius: 10px;
+    width: 35px;
+    height: 30px;
+    transition: transform .4s ease;
+    margin-right: 15px;
+}
+
+.flag-btn:hover {
+    transform: translateY(-8%);
+}
+
+.flag-icon {
+    width: 18px;
+}
+
+.task-item-container {
+    display: flex;
+    flex-direction: row;
 }
