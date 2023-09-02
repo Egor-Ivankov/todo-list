@@ -32,7 +32,7 @@ const TaskAddForm = () => {
                     value={newTask} 
                     onChange={(e) => setNewTask(e.target.value)} 
                     name="Task-creater"
-                    placeholder='New Task'
+                    placeholder='Write a task'
                     />
                 <button className="add-btn" type='submit'>
                     <img src={plusIcon} alt="plus-icon" className='plus-icon'/>
