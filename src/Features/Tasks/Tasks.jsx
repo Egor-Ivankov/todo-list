@@ -7,6 +7,7 @@ import './tasks.css';
 
 const Tasks = () => {   
     const tasks = useSelector(state => state.tasks.tasks);
+    const isImportant = useSelector(state => state.filters.isImportant);
     const dispatch = useDispatch();
 
     const renderTasks = (arr) => {
@@ -16,7 +17,7 @@ const Tasks = () => {
                     <li className='task-list-empty'>Task list is empty</li>
                 </CSSTransition>
             )
-        }
+        } 
         return arr.map(({id, ...props}) => {
             return (
                 <CSSTransition key={id} timeout={400} classNames="item">
@@ -31,10 +32,22 @@ const Tasks = () => {
     }
 
     const elements = renderTasks(tasks);
+    const filteredTasks = tasks.filter(item => item.important === isImportant);
+    const renderFilteredTasks = renderTasks(filteredTasks);
+
+    const filteredElements = () => {
+        if (isImportant) {
+            return renderFilteredTasks;
+        } else {
+            return elements;
+        }
+    }
+    
+    const renderElements = filteredElements();
 
     return (
         <TransitionGroup component='ul' className='tasks-list'>
-                {elements}
+                {renderElements}
         </TransitionGroup>
     );  
 }
