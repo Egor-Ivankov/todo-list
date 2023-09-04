@@ -1,8 +1,10 @@
-# React + Vite
+# React-redux + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+In this project, i used Vite for create App and used Redux-toolkit state manager for creating shared store.
 
-Currently, two official plugins are available:
+![Todo](https://github.com/Egor-Ivankov/redux-vite-test/assets/122007814/5fa4a9bf-8f5f-4ab4-af2c-a5630f2e4e93);
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+To get started:
+
+# 1 - npm i;
+# 2 - npm run dev;
