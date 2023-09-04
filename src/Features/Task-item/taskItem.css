@@ -19,11 +19,14 @@
     padding: 5px;
     margin: 10px 0;
     box-shadow: 1px 1px 1px .5px rgba(16, 16, 16, 0.113);
+    background-color: white;
 }
 .task-item-span {
     font-weight: 200;
+    max-width: 280px;
     font-size: 20px;
     margin-left: 10px;
+    overflow: hidden;
 }
 .delete-btn {
     display: flex;
@@ -52,8 +55,8 @@
     align-items: center;
     justify-content: center;
     border: none;
-    background-color: rgba(234, 173, 19, 0.623);
-    box-shadow: 1px 1px 1px 1px rgba(234, 173, 19, 0.298);
+    background-color: rgba(252, 183, 8, 0.639);
+    box-shadow: 1px 1px 1px 1px rgba(252, 183, 8, 0.255);
     color: white;
     border-radius: 10px;
     width: 35px;

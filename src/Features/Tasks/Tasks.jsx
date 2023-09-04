@@ -31,6 +31,7 @@ const Tasks = () => {
             )
         });
     }
+
     const getSearchedTasks = (tasks) => {
         if (searchFilter < 1) {
             return tasks;

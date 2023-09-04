@@ -18,9 +18,9 @@ const TaskAddForm = () => {
 
     const onHandleSubmit = (e) => {
         e.preventDefault();
-        if (newTask) {
+        if (newTask.length >= 3) {
             dispatch(tasksCreated(newTaskItem))
-        } else return;
+        } else return alert('Task length must be bigger 2 symbols');
         setNewTask('');
     }
     
