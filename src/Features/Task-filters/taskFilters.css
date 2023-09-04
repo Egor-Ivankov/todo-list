@@ -10,6 +10,7 @@
     border: none;
     cursor: pointer;
     background-color: rgba(71, 94, 241, 0.361);
+    box-shadow: 1px 1px 1px 1px rgba(71, 94, 241, 0.299);
     border-radius: 5px;
     color: white;
     height: 42px;
