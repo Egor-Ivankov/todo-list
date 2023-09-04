@@ -8,6 +8,7 @@ import './tasks.css';
 const Tasks = () => {   
     const tasks = useSelector(state => state.tasks.tasks);
     const isImportant = useSelector(state => state.filters.isImportant);
+    const searchFilter = useSelector(state => state.search.value);
     const dispatch = useDispatch();
 
     const renderTasks = (arr) => {
@@ -30,11 +31,21 @@ const Tasks = () => {
             )
         });
     }
+    const getSearchedTasks = (tasks) => {
+        if (searchFilter < 1) {
+            return tasks;
+        }
+        return tasks.filter(item => item.value.indexOf(searchFilter) > -1);
+    };
 
-    const elements = renderTasks(tasks);
     const filteredTasks = tasks.filter(item => item.important === isImportant);
-    const renderFilteredTasks = renderTasks(filteredTasks);
 
+    const searchedTasks = getSearchedTasks(tasks);
+    const searchedFilteredTasks = getSearchedTasks(filteredTasks);
+    
+    const elements = renderTasks(searchedTasks);
+    const renderFilteredTasks = renderTasks(searchedFilteredTasks);
+    
     const filteredElements = () => {
         if (isImportant) {
             return renderFilteredTasks;
